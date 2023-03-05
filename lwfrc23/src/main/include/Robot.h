@@ -41,7 +41,7 @@ class Robot : public frc::TimedRobot {
   frc::PWMSparkMax m_frontArm{4};
 
   // create drivetrain
-  frc::DifferentialDrive mrobotDrive{leftDriveMotor, rightDriveMotor};
+  frc::DifferentialDrive m_robotDrive{leftDriveMotor, rightDriveMotor};
 
 
   void RobotInit() override{
@@ -59,7 +59,11 @@ class Robot : public frc::TimedRobot {
 
   // Teleop Runtime
   void TeleopInit() override;
-  void TeleopPeriodic() override;
+  void TeleopPeriodic() override{
+    // Drive - Tank Style
+    m_robotDrive.TankDrive(-m_driverController.GetLeftY(), -m_driverController.GetRightY());
+    
+  };
 
   // Bot Disabled Runtime
   void DisabledInit() override;
