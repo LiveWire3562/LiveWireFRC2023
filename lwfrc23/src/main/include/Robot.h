@@ -12,6 +12,9 @@
 // add XBOX controller
 #include <frc/XboxController.h>
 
+// add Differential Drive
+#include <frc/drive/DifferentialDrive.h>
+
 class Robot : public frc::TimedRobot {
  public:
   void RobotInit() override;
