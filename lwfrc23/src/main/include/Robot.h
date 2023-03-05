@@ -23,7 +23,17 @@ class Robot : public frc::TimedRobot {
   
   // xbox controllor
   frc::XboxController m_driverController{0};
-  
+
+  // assign drive motors
+  frc::PWMSparkMax m_rightFront{0};
+  frc::PWMSparkMax m_rightRear{2};
+  frc::PWMSparkMax m_leftFront{1};
+  frc::PWMSparkMax m_leftRear{3};
+
+  // create drivetrain
+
+
+
   void RobotInit() override;
   void RobotPeriodic() override;
   void AutonomousInit() override;
