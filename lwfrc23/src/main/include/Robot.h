@@ -15,6 +15,9 @@
 // add Differential Drive
 #include <frc/drive/DifferentialDrive.h>
 
+// add motor controls
+#include <frc/motorcontrol/PWMSparkMax.h>
+
 class Robot : public frc::TimedRobot {
  public:
   void RobotInit() override;
