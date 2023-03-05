@@ -9,6 +9,9 @@
 #include <frc/TimedRobot.h>
 #include <frc/smartdashboard/SendableChooser.h>
 
+// add XBOX controller
+#include <frc/XboxController.h>
+
 class Robot : public frc::TimedRobot {
  public:
   void RobotInit() override;
