@@ -43,12 +43,8 @@ class Robot : public frc::TimedRobot {
   // create drivetrain
   frc::DifferentialDrive m_robotDrive{leftDriveMotor, rightDriveMotor};
 
-
-  void RobotInit() override{
-    // invert motor on side - may need changed to other side
-    // this keeps forward onpositive voltages only
-    rightDriveMotor.SetInverted(true);
-  };
+  // Run on Boot/Initialization
+  void RobotInit() override;
 
   // run items in any mode
   void RobotPeriodic() override;
@@ -59,11 +55,7 @@ class Robot : public frc::TimedRobot {
 
   // Teleop Runtime
   void TeleopInit() override;
-  void TeleopPeriodic() override{
-    // Drive - Tank Style
-    m_robotDrive.TankDrive(-m_driverController.GetLeftY(), -m_driverController.GetRightY());
-    
-  };
+  void TeleopPeriodic() override;
 
   // Bot Disabled Runtime
   void DisabledInit() override;
