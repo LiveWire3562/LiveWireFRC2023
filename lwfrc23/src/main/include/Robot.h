@@ -34,8 +34,8 @@ class Robot : public frc::TimedRobot {
   frc::PWMSparkMax m_leftRear{3};
 
   // create left and right motor groups
-  frc::MotorControllerGroup rightDriveMotors{m_rightFront, m_rightRear};
-  frc::MotorControllerGroup leftDriveMotors{m_leftFront, m_leftRear};
+  frc::MotorControllerGroup rightDriveMotor{m_rightFront, m_rightRear};
+  frc::MotorControllerGroup leftDriveMotor{m_leftFront, m_leftRear};
 
   // add arm motor
   frc::PWMSparkMax m_frontArm{4};
