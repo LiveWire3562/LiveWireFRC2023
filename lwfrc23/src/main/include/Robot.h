@@ -41,7 +41,7 @@ class Robot : public frc::TimedRobot {
   frc::PWMSparkMax m_frontArm{4};
 
   // create drivetrain
-
+  frc::DifferentialDrive mrobotDrive{leftDriveMotor, rightDriveMotor};
 
 
   void RobotInit() override;
