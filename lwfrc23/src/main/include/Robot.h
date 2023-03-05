@@ -46,6 +46,7 @@ class Robot : public frc::TimedRobot {
 
   void RobotInit() override{
     // invert motor on side - may need changed to other side
+    // this keeps forward onpositive voltages only
     rightDriveMotor.SetInverted(true);
   };
 
