@@ -44,7 +44,11 @@ class Robot : public frc::TimedRobot {
   frc::DifferentialDrive mrobotDrive{leftDriveMotor, rightDriveMotor};
 
 
-  void RobotInit() override;
+  void RobotInit() override{
+    // invert motor on side - may need changed to other side
+    rightDriveMotor.SetInverted(true);
+  };
+
   void RobotPeriodic() override;
   void AutonomousInit() override;
   void AutonomousPeriodic() override;
