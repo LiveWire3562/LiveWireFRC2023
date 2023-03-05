@@ -20,6 +20,10 @@
 
 class Robot : public frc::TimedRobot {
  public:
+  
+  // xbox controllor
+  frc::XboxController m_driverController{0};
+  
   void RobotInit() override;
   void RobotPeriodic() override;
   void AutonomousInit() override;
