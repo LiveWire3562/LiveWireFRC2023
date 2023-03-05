@@ -18,6 +18,9 @@
 // add motor controls
 #include <frc/motorcontrol/PWMSparkMax.h>
 
+// add motor control group
+#include <frc/motorcontrol/MotorControllerGroup.h>
+
 class Robot : public frc::TimedRobot {
  public:
   
