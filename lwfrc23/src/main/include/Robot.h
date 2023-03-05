@@ -50,11 +50,18 @@ class Robot : public frc::TimedRobot {
     rightDriveMotor.SetInverted(true);
   };
 
+  // run items in any mode
   void RobotPeriodic() override;
+
+  // Autonomous runtime 
   void AutonomousInit() override;
   void AutonomousPeriodic() override;
+
+  // teleop runtime
   void TeleopInit() override;
   void TeleopPeriodic() override;
+
+  
   void DisabledInit() override;
   void DisabledPeriodic() override;
   void TestInit() override;
