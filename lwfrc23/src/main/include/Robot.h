@@ -53,21 +53,26 @@ class Robot : public frc::TimedRobot {
   // run items in any mode
   void RobotPeriodic() override;
 
-  // Autonomous runtime 
+  // Autonomous Runtime 
   void AutonomousInit() override;
   void AutonomousPeriodic() override;
 
-  // teleop runtime
+  // Teleop Runtime
   void TeleopInit() override;
   void TeleopPeriodic() override;
 
-  
+  // Bot Disabled Runtime
   void DisabledInit() override;
   void DisabledPeriodic() override;
+
+  // Bot Testing Runtime
   void TestInit() override;
   void TestPeriodic() override;
+
+ //  Bot Sim Runtime
   void SimulationInit() override;
   void SimulationPeriodic() override;
+
 
  private:
   frc::SendableChooser<std::string> m_chooser;
