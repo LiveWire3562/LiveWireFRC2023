@@ -30,6 +30,9 @@ class Robot : public frc::TimedRobot {
   frc::PWMSparkMax m_leftFront{1};
   frc::PWMSparkMax m_leftRear{3};
 
+  // add arm motor
+  frc::PWMSparkMax m_frontArm{4};
+
   // create drivetrain
 
 
