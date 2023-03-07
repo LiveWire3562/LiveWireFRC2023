@@ -34,14 +34,14 @@ class Robot : public frc::TimedRobot {
   frc::PWMSparkMax m_leftRear{3};
 
   // create left and right motor groups
-  frc::MotorControllerGroup rightDriveMotor{m_rightFront, m_rightRear};
-  frc::MotorControllerGroup leftDriveMotor{m_leftFront, m_leftRear};
+  frc::MotorControllerGroup m_rightDriveMotor{m_rightFront, m_rightRear};
+  frc::MotorControllerGroup m_leftDriveMotor{m_leftFront, m_leftRear};
 
   // add arm motor
   frc::PWMSparkMax m_frontArm{4};
 
   // create drivetrain
-  frc::DifferentialDrive m_robotDrive{leftDriveMotor, rightDriveMotor};
+  frc::DifferentialDrive m_robotDrive{m_leftDriveMotor, m_rightDriveMotor};
 
   // Run on Boot/Initialization
   void RobotInit() override;
