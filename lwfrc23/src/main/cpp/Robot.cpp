@@ -54,11 +54,14 @@ void Robot::AutonomousPeriodic() {
   } else {
     // Default Auto goes here
   }
-}
+}   
 
 void Robot::TeleopInit() {}
 
-void Robot::TeleopPeriodic() {}
+void Robot::TeleopPeriodic() {
+  m_robotDrive.TankDrive(-m_driverController.GetLeftY(),
+                         -m_driverController.GetRightY());
+}
 
 void Robot::DisabledInit() {}
 
