@@ -28,17 +28,17 @@ class Robot : public frc::TimedRobot {
   frc::XboxController m_driverController{0};
 
   // assign drive motors
-  frc::PWMSparkMax m_rightFront{0};
-  frc::PWMSparkMax m_rightRear{2};
-  frc::PWMSparkMax m_leftFront{1};
-  frc::PWMSparkMax m_leftRear{3};
+  frc::PWMSparkMax m_rightFront{1};
+  frc::PWMSparkMax m_rightRear{3};
+  frc::PWMSparkMax m_leftFront{2};
+  frc::PWMSparkMax m_leftRear{4};
 
   // create left and right motor groups
   frc::MotorControllerGroup m_rightDriveMotor{m_rightFront, m_rightRear};
   frc::MotorControllerGroup m_leftDriveMotor{m_leftFront, m_leftRear};
 
   // add arm motor
-  frc::PWMSparkMax m_frontArm{4};
+  frc::PWMSparkMax m_frontArm{5};
 
   // create drivetrain
   frc::DifferentialDrive m_robotDrive{m_leftDriveMotor, m_rightDriveMotor};
